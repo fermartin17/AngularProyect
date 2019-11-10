@@ -1,0 +1,23 @@
+<ng-container *ngIf="!isLogged; else logged">
+  <div>
+    <button (click)="isLogged = true">Iniciar Sesion</button>
+  </div>
+  <div>
+    <button>Registrarse</button>
+  </div>
+</ng-container>
+<ng-template #logged>
+  <div>
+    <button>home</button>
+  </div>
+  <div>
+    <button>otra pagina</button>
+  </div>
+  <div>
+    <button (click)="isLogged = false">logout</button>
+  </div>
+</ng-template>
+
+<div>
+  <button *ngIf="nivel == 6">vip</button>
+</div>

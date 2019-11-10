@@ -1,0 +1,18 @@
+<div>
+  <button (click)="turnAvailable()" [disabled]="desactivado">boton</button>
+</div>
+<div>
+  <h1>tu nombre es {{ titulo }}</h1>
+</div>
+<div>
+  <input type="text" [(ngModel)]="titulo" (ngModelChange)="log($event)" />
+</div>
+
+<div>
+  <h1>tu nombre es {{ seleccion }}</h1>
+</div>
+<select [(ngModel)]="seleccion">
+    <option value="toyota">Toyota</option>
+    <option value="ford">Ford</option>
+    <option value="mini">Mini</option>
+</select>

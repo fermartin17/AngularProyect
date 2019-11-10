@@ -1,0 +1,17 @@
+<form [formGroup] = "register" (ngSubmit)="enviar(register.value)"> 
+        <label>Nombre</label>
+        <input formControlName = "Nombre" type="text" />
+        <br />
+        <label>Usuario</label>
+        <input formControlName = "Usuario" type="text" />
+        <br />
+        <label>email</label>
+        <input formControlName = "email" type="email" />
+        <br />
+        <div *ngIf="register.get('email').hasError('email')&& register.get('email').touched">Pone el mail</div>
+        <label>contraseña</label>
+        <input formControlName = "clave" type="password" />
+        <br>
+        <button [disabled]="register.invalid" type="submit">Save</button>
+      </form>
+      
